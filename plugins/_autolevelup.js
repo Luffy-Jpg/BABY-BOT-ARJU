@@ -10,7 +10,9 @@ export async function before(m, { conn }) {
         user.level++
     user.role = global.rpg.role(user.level).name
     if (before !== user.level) {
-        m.reply(``.trim())
+        m.reply(`Congratulations 🎊 for level up Legend`.trim())
     }
 }
 
+handler.group = true 
+export default handler 
