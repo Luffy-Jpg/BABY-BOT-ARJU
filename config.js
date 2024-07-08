@@ -6,7 +6,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "919131652091;ARJU"
+const ownervb = process.env.OWNERS || "919131652091;ARJU;917090462940;RDJ;254106722539;GHOST"
 
 
 const ownerlist = ownervb.split(';');
@@ -25,7 +25,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 
 //global.database = 'mongodb+srv://arju:grandmasterx9131@payal.vczf3er.mongodb.net/?retryWrites=true&w=majority'
 global.mods = ['919131652091']
-global.prems = ['919131652091', '919005916821', '919882879277', '917090462940', '918431403667', '923166424629', '923278974102', '923206629195', '919876249720']
+global.prems = ['919131652091', '919005916821', '919882879277', '917090462940', '918431403667', '923166424629', '923278974102', '923206629195','254106722539', '919876249720']
 global.allowed = ['919131652091']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
