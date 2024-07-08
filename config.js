@@ -6,7 +6,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "919131652091;ARJU;917090462940;RDJ;254106722539;GHOST"
+const ownervb = process.env.OWNERS || "254106722539;ARJU"
 
 
 const ownerlist = ownervb.split(';');
@@ -24,7 +24,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 //global.pairingNumber = "" //put your bot number here
 
 //global.database = 'mongodb+srv://arju:grandmasterx9131@payal.vczf3er.mongodb.net/?retryWrites=true&w=majority'
-global.mods = ['919131652091']
+global.mods = ['254106722539']
 global.prems = ['919131652091', '919005916821', '919882879277', '917090462940', '918431403667', '923166424629', '923278974102', '923206629195','254106722539', '919876249720']
 global.allowed = ['919131652091']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
@@ -70,11 +70,11 @@ global.APIKeys = {
 }
 
 // Sticker WM
-global.botname = 'Riruru'
+global.botname = 'RIRURU-AI'
 global.premium = 'true'
-global.packname = ''
-global.author = '█▓▒▒░░░ARJU░░░▒▒▓█'
-global.menuvid = 'https://imgur.com/HH0g2sa.mp4'
+global.packname = 'RIRURU-AI :by'
+global.author = 'ARJU'
+global.menuvid = 'https://imgur.com/eOrSiXr.mp4'
 global.igfg = 'https://bot-support.vercel.app/'
 global.dygp = 'https://bot-support.vercel.app/'
 global.fgsc = 'https://bot-support.vercel.app/'
@@ -83,7 +83,7 @@ global.fgpyp = 'https://bot-support.vercel.app/'
 global.fglog = 'https://bot-support.vercel.app/'
 global.thumb = fs.readFileSync('bot.jpg')
 
-global.wait = '> Loading...'
+global.wait = '*Intajar karo...*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
