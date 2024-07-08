@@ -178,7 +178,7 @@ import {
  readmore: readMore
    }
    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, "g"), (_, name) => "" + replace[name])
-   const pp = '.bot.jpg'
+   const pp = 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp'
   
  
  let contact = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
@@ -206,14 +206,14 @@ import {
  const more = String.fromCharCode(8206)
  const readMore = more.repeat(4001)
  
- function clockString(ms) {
+ /*function clockString(ms) {
   let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60
   return [h, " H ", m, " M ", s, " S "].map(v => v.toString().padStart(2, 0)).join("")
- }
+ }  ARJU 💻 */
  
- function clockStringP(ms) {
+ function clockString(ms) {
   let ye = isNaN(ms) ? "--" : Math.floor(ms / 31104000000) % 10
   let mo = isNaN(ms) ? "--" : Math.floor(ms / 2592000000) % 12
   let d = isNaN(ms) ? "--" : Math.floor(ms / 86400000) % 30
