@@ -1,7 +1,6 @@
 
-
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-let img = 'https://i.postimg.cc/N0gPt8Kz/IMG-20240120-WA0198.jpg'
+let img = 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp'
 
   let _muptime
     if (process.send) {
@@ -15,7 +14,7 @@ let img = 'https://i.postimg.cc/N0gPt8Kz/IMG-20240120-WA0198.jpg'
     (v) => v.help && v.tags
   ).length 
     let muptime = clockString(_muptime)
-    let str =  `${muptime}\n\n*Name*\n${conn.user.name}\n*ADMINISTRATOR*\nARJU ${totalf}`
+    let str =  `*BOT-Name*\n${conn.user.name}\n\n*ADMINISTRATOR*\nARJU\n\nToF ${totalf}\n\n\n\n*TEAM-ARJU*`
     conn.sendMessage(m.chat, {
       text: str,
       contextInfo: {
@@ -23,13 +22,13 @@ let img = 'https://i.postimg.cc/N0gPt8Kz/IMG-20240120-WA0198.jpg'
       isForwarded: false,
       forwardingScore: 0,
       externalAdReply: {
-      title: "FOLLOW ME ON INSTAGRAM",
-      body: "ARJU-SONWANI", 
+      title: `${muptime}`,
+      body: "RIRURU-AI [ UP - TIME ]", 
       thumbnailUrl: img,
       sourceUrl: 'https://www.instagram.com/arju_sonwani.dev?igsh=a2UxZ3ZyZjNicmUw',
       mediaType: 1,
       ShowAdAttribution: false, 
-      renderLargerThumbnail: false
+      renderLargerThumbnail: true
       }}})
 }
 handler.help = ['runtime']
@@ -55,5 +54,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60
-  return [ye, " *Years 🗓️*\n", mo, " *Month 🌙*\n", d, " *Days ☀️*\n", h, " *Hours 🕐*\n", m, " *Minute ⏰*\n", s, " *Second ⏱️*"].map(v => v.toString().padStart(2, 0)).join('')
+  return [ye, " Year | " , mo , " Month | " , d , " Day | " , h , " Hour | ", m , " Minute | ", s, " Second"].map(v => v.toString().padStart(2, 0)).join("")
  }
