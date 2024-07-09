@@ -72,10 +72,10 @@ global.APIKeys = {
 // Sticker WM
 global.botname = 'RIRURU-AI'
 global.premium = 'true'
-global.packname = 'RIRURU-AI :by'
+global.packname = 'RIRURU-AI'
 global.author = 'ARJU'
 global.menuvid = 'https://imgur.com/eOrSiXr.mp4'
-global.igfg = 'https://bot-support.vercel.app/'
+global.igfg = '\n\n*TEAM-ARJU*'
 global.dygp = 'https://bot-support.vercel.app/'
 global.fgsc = 'https://bot-support.vercel.app/'
 global.fgyt = 'https://bot-support.vercel.app/'
