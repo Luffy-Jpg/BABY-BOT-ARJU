@@ -39,7 +39,7 @@
     "bugs": {
         "url": "https://github.com/Guru322/GURU-BOT/issues"
     },
-    "license": "Apache License 2.0",
+    "license": "MIT",
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.0.22-alpha.0",
