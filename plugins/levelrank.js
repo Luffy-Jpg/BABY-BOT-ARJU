@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
   if (!canLevelUp(user.level, user.exp, global.multiplier)) {
     let { min, xp, max } = xpRange(user.level, global.multiplier)
     let txt = `
-┌───⊷ *LEVEL*
+┌───⊷ *LEVEL*\n
 ▢ Access guy : *${name}*\n
 ▢ Level : *${user.level}*\n
 ▢ XP : *${user.exp - min}/${xp}*\n
@@ -29,7 +29,7 @@ Hey there, ${name}! You're not ready to level up just yet. It seems like you nee
     }
   } else {
     let str = `
-┌─⊷ *LEVEL UP*
+┌─⊷ *LEVEL UP*\n
 ▢ Previous level : *${user.level - 20}*\n
 ▢ Current level : *${user.level}*\n
 ▢ Karm : *${user.role}*\n
