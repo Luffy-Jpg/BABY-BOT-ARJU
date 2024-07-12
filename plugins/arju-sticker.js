@@ -24,7 +24,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       stiker = await createSticker(false, args[0], '', author, 20)
     } else throw `*RESPOND TO A IMAGE OR VIDEO OR GIF ${usedPrefix + command}*`
   } catch {
-    stiker = '*huh!*'
+    stiker = '*Kya kar raha hai bhaiii tuuu.......*'
   } finally {
     m.reply(stiker)
   }
@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['sfull']
 handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
-handler.group = true
+handler.group = true 
 export default handler
 const isUrl = text =>
   text.match(
