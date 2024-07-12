@@ -11,7 +11,7 @@ const handler = async (m, { conn, text }) => {
     const q = m.quoted ? m.quoted : m
     const mime = (q.msg || q).mimetype || ''
     const img = await q.download()
-    const apikey = process.env.REMOVEBG_KEY // Use the API_KEY from the environment variable
+    const apikey = '8iRG6QgL6zWzsDpAM9FRGWQP' // Use the API_KEY from the environment variable
 
     const formData = new FormData()
     formData.append('size', 'auto')
