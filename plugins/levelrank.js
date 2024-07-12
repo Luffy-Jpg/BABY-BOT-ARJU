@@ -22,8 +22,8 @@ Hey there, ${name}! You're not ready to level up just yet. It seems like you nee
 `.trim()
 
     try {
-      let imgg = `https://wecomeapi.onrender.com/rankup-image?username=${encodeURIComponent(name)}&currxp=${user.exp - min}&needxp=${xp}&level=${user.level}&rank=${encodeURIComponent(pp)}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(background)}`
-      conn.sendFile(m.chat, imgg, 'level.jpg', txt, m)
+      let imgg = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAVeju5sp9FM0iRkRrkDBEa8y0W71XmGFw40RoaVXBKjPYrunyGLmTbDw&s=10`
+      conn.sendFile(m.chat, imgg, 'bot.jpg', txt, m)
     } catch (e) {
       m.reply(txt)
     }
@@ -40,8 +40,8 @@ Your newfound power will strike fear into the hearts of trolls, and the bots wil
 `.trim()
 
     try {
-      let img = `https://wecomeapi.onrender.com/levelup-image?avatar=${encodeURIComponent(pp)}`
-      conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
+      let img = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAVeju5sp9FM0iRkRrkDBEa8y0W71XmGFw40RoaVXBKjPYrunyGLmTbDw&s=10}`
+      conn.sendFile(m.chat, img, 'bot.jpg', str, m)
     } catch (e) {
       m.reply(str)
     }
