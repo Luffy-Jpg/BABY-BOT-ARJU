@@ -17,12 +17,12 @@ export async function before(m, { conn, match, usedPrefix, command }) {
 		let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 		let name = await conn.getName(who)
 		let caption = `
-Hello Ji 
+Hello Ji Namaste 🙏 🙏 
 
-maybe you meant : 
+looks like you are trying to use: 
 
- இ   *${usedPrefix + mean}*\n
- இ   *Similarity:* *${parseInt(som)}%*\n\n*RIRURU-AI*\n
+😁 *${usedPrefix + mean}*\n  
+😄 *Similarity:* *${parseInt(som)}%*\n\n*RIRURU-AI*\n
 Follow these steps to start using WhatsApp bots responsibly:
 
 (1) .menu
@@ -35,7 +35,7 @@ Follow these steps to start using WhatsApp bots responsibly:
 
 (PREFIX  -  .  ,  /  *  #   !  ~  )`
 
- if (mean) this.sendButton(m.chat, caption, igfg, 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp', [['RUNTIME', `/runtime`]], null, [['Visit Guide', `https://bot-support.vercel.app/#get-started`]], m, { mentions: [who]})
+ if (mean) this.sendButton(m.chat, caption, igfg, 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp', [['', `/runtime`]], null, [['Visit Guide 🗿', `https://bot-support.vercel.app/#get-started`]], m, { mentions: [who]})
 	    }
 }
 export const disabled = false
