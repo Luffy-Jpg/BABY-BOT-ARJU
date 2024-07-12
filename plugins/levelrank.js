@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
 ┌───⊷ *LEVEL*\n
 ▢ Access guy : *${name}*\n
 ▢ Level : *${user.level}*\n
-▢ XP : *${user.exp - min}/${xp}*\n
+▢ XP : *😁 ${user.exp - min}/${xp} ❤️*\n
 ▢ Karm : *${user.role}*\n
 └──────────────
 
@@ -30,7 +30,7 @@ Hey there, ${name}! You're not ready to level up just yet. It seems like you nee
   } else {
     let str = `
 ┌─⊷ *LEVEL UP*\n
-▢ Previous level : *${user.level - 20}*\n
+▢ Previous level : *${user.level - 1}*\n
 ▢ Current level : *${user.level}*\n
 ▢ Karm : *${user.role}*\n
 └──────────────
