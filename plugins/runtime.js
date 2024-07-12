@@ -48,26 +48,26 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 
         // Constructing the message string with system info
         const str = `
-*BOT-Name*
+*BOT-Name*\n
 ${systemInfo.botName}
 
-*ADMINISTRATOR*
+*ADMINISTRATOR*\n
 ${systemInfo.administrator}
 
-*Functional Plugins*
+*Functional Plugins*\n
 ToF ${systemInfo.totalFunctionalPlugins}
 
-*RunTime*
+*RunTime*\n
 ${systemInfo.uptime}
 
-*System Stats*
-- *RAM:  ${systemInfo.ramInfo} (${systemInfo.ramUsage})*
-- *Storage:  ${systemInfo.romInfo} (${systemInfo.romUsage})*
-- *GPU:  ${systemInfo.gpuInfo}*
-- *CPU Speed:  ${systemInfo.speedInfo}*
-- *CPU Temperature:  ${systemInfo.temperatureInfo}*
+*System Stats*\n
+- *RAM:  ${systemInfo.ramInfo} (${systemInfo.ramUsage})*\n
+- *Storage:  ${systemInfo.romInfo} (${systemInfo.romUsage})*\n
+- *GPU:  ${systemInfo.gpuInfo}*\n
+- *CPU Speed:  ${systemInfo.speedInfo}*\n
+- *CPU Temperature:  ${systemInfo.temperatureInfo}*\n
 
-*TEAM-ARJU*
+\n> *TEAM-ARJU*
 `;
 
         // Sending message with system info
