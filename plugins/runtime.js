@@ -1,4 +1,3 @@
-import pidusage from 'pidusage';
 import os from 'os';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
@@ -14,15 +13,15 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
         }) * 1000;
     }
 
-    // Fetching total number of functional plugins
+    // Format uptime using clockString function
+    const muptime = clockString(_muptime);
+
+    // Fetching total number of functional plugins (example)
     const totalf = Object.values(global.plugins).filter(
         (v) => v.help && v.tags
     ).length;
 
-    // Format uptime using clockString function
-    const muptime = clockString(_muptime);
-
-    // Fetching system information
+    // Example system information
     const systemInfo = {
         botName: conn.user.name,
         administrator: 'ARJU', // Replace with actual administrator info
@@ -30,55 +29,45 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
         team: 'TEAM-ARJU',
         uptime: muptime,
         gpuInfo: 'NVIDIA GeForce RTX 3090', // Example GPU info
-        ramInfo: '8 TB', // Example RAM info
+        ramInfo: `${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} GB`, // RAM info in GB
         romInfo: '16 TB', // Example ROM info
         speedInfo: '4.2 GHz', // Example CPU speed info
-        temperatureInfo: 'Cool', // Example CPU temperature info
-        ramUsage: '6 TB', // Placeholder for RAM usage
-        romUsage: '10 TB' // Placeholder for ROM usage
+        temperatureInfo: 'Cool' // Example CPU temperature info
     };
 
     try {
-        // Getting CPU and Memory usage
-        const stats = await pidusage(process.pid);
-        const cpuUsage = stats.cpu.toFixed(2); // CPU usage in percentage
-        const memoryUsage = (stats.memory / 1024 / 1024).toFixed(2); // Memory usage in MB
-
         // Fetching RAM usage
         const totalRAM = os.totalmem();
         const usedRAM = totalRAM - os.freemem();
-        systemInfo.ramUsage = `${(usedRAM / 1024 / 1024).toFixed(2)} MB / ${(totalRAM / 1024 / 1024).toFixed(2)} MB`;
+        systemInfo.ramUsage = `${(usedRAM / 1024 / 1024 / 1024).toFixed(2)} GB / ${(totalRAM / 1024 / 1024 / 1024).toFixed(2)} GB`;
 
-        // Fetching ROM (storage) usage
-        const totalROM = 10 * 1024 * 1024; // Assuming 10 TB in MB
-        const usedROM = 50 * 1024; // Example usage in MB
+        // Fetching ROM (storage) usage (example)
+        const totalROM = 16 * 1024; // Assuming 16 TB in GB
+        const usedROM = 50 * 1024; // Example usage in GB
         systemInfo.romUsage = `${(usedROM / 1024).toFixed(2)} TB / ${(totalROM / 1024).toFixed(2)} TB`;
 
         // Constructing the message string with system info
         const str = `
-*BOT-Name*\n
+*BOT-Name*
 ${systemInfo.botName}
 
 *ADMINISTRATOR*
-
 ${systemInfo.administrator}
 
 *Functional Plugins*
-
 ToF ${systemInfo.totalFunctionalPlugins}
 
 *RunTime*
-
 ${systemInfo.uptime}
 
-*System Stats*\n
-- *CPU Usage:  ${cpuUsage}%*\n 
-- *Memory Usage:  ${memoryUsage} MB*\n
-- *GPU:  ${systemInfo.gpuInfo}*\n
-- *RAM:  ${systemInfo.ramInfo} (${systemInfo.ramUsage})*\n
-- *Storage:  ${systemInfo.romInfo} (${systemInfo.romUsage})*\n
-- *CPU Speed:  ${systemInfo.speedInfo}*\n
-- *CPU Temperature:  ${systemInfo.temperatureInfo}*\n\n\n*TEAM-ARJU*
+*System Stats*
+- *RAM:  ${systemInfo.ramInfo} (${systemInfo.ramUsage})*
+- *Storage:  ${systemInfo.romInfo} (${systemInfo.romUsage})*
+- *GPU:  ${systemInfo.gpuInfo}*
+- *CPU Speed:  ${systemInfo.speedInfo}*
+- *CPU Temperature:  ${systemInfo.temperatureInfo}*
+
+*TEAM-ARJU*
 `;
 
         // Sending message with system info
@@ -122,3 +111,5 @@ function clockString(ms) {
     const seconds = Math.floor(ms / 1000) % 60;
     return `*${years} Year ${months} Month ${days} Day ${hours} Hour ${minutes} Minute ${seconds} Second*`;
 }
+
+
