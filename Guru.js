@@ -221,7 +221,7 @@ const connectionOptions = {
     level: 'fatal',
   }),
   printQRInTerminal: !pairingCode,
-  browser: ['chrome (linux)', '', ''],
+  browser: ['RIRURU-2.0 (Termux)', '', ''],
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(
