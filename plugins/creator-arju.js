@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   // Sound
   let name = m.pushName || conn.getName(m.sender);
-  var vn = "https://raw.githubusercontent.com/thearju/A17/master/Assets/audio/tag.mp3";
+  var vn = "https://raw.githubusercontent.com/thearju/A17/master/Assets/audio/ad.mp3";
   let url = "https://github.com/thearju/gmx-1.0";
   let murl = "https://bot-support.vercel.app";
   let img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnUuf8um5mtRViqgk_YWEgewTtkvcxd9izAw&s";
@@ -35,7 +35,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         title: `Hello ♥️😊 ${m.name}`,
         body: `Click on here 🎶`,
         thumbnailUrl: img,
-        sourceUrl: "https://wa.me/919131652091?text=hello%20sir!%20please%20create%20a%20website%20for%20me",
+        sourceUrl: "https://wa.me/254106722539",
         mediaType: 1,
         showAdAttribution: false, 
         renderLargerThumbnail: true,
@@ -47,7 +47,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ["owner"];
-handler.tags = ["gmx"];
+handler.tags = ["DEVELOPER"];
 handler.command = ["developer", "owner", "admin"];
 handler.group = true;
 export default handler;
