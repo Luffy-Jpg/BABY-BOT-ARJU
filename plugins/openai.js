@@ -26,7 +26,7 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
         throw new Error('No valid JSON response from the first API')
       }
 
-      await conn.sendButton(m.chat,result, author, 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp', [['', `.sc`]], null, [['DEVELOPER', `https://wa.me/254106722539`]], m)
+      await conn.sendButton(m.chat,result, author, 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp', [['', `.sc`]], null, [['ARJU', `https://wa.me/919131652091`]], m)
       m.react(done)
     } catch (error) {
       console.error('Error from the first API:', error)
@@ -40,7 +40,7 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
       let data = await response.json()
       let result = data.completion
 
-      await conn.sendButton(m.chat,result, author, 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp', [['', `.sc`]], null, [['DEVELOPER', `https://wa.me/254106722539`]], m)
+      await conn.sendButton(m.chat,result, author, 'https://i.ytimg.com/vi_webp/fSMiH4NOga0/maxresdefault.webp', [['', `.sc`]], null, [['ARJU', `https://wa.me/9131652091`]], m)
       m.react(done)
     }
   } catch (error) {
