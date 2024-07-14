@@ -17,7 +17,7 @@ let handler = async (m, { conn }) => {
   let timestamp = speed()
 
   await exec('neofetch --stdout', async (error, stdout) => {
-    let latency = (speed() - timestamp).toFixed(4)
+    let latency = (speed() - timestamp).toFixed(2)
 
     await conn.relayMessage(
       m.chat,
@@ -26,7 +26,7 @@ let handler = async (m, { conn }) => {
           key: pingMsg.key,
           type: 14,
           editedMessage: {
-            conversation: `Pong!\n*Latency: ${latency} M. S.*`,
+            conversation: `Pong! 💥\n*Latency : ☄️* \n> "*_[ ${latency} ]_* *m.s.*`,
           },
         },
       },
